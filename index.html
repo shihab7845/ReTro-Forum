@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro Forum</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- DaisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.6/dist/full.min.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="flex flex-col sm:flex-row justify-between items-center  p-4">
+      <div class="mb-4 sm:mb-0 sm:mr-4">
+        <img src="images/logo.png" alt="Logo" class="w-32">
+      </div>
+      <div class="flex justify-center gap-3">
+        <button class="rounded-full border border-gray-400 btn btn-ghost">
+          <img src="images/Frame (2).png" alt="Icon 1">
+        </button>
+        <button class="rounded-full border border-gray-400 btn btn-ghost">
+          <img src="images/Vector.png" alt="Icon 2">
+        </button>
+        <button class="rounded-full border border-gray-400 btn btn-ghost">
+          <img src="images/Frame (3).png" alt="Icon 3">
+        </button>
+        <button class="rounded-full border border-gray-400 btn btn-ghost">
+          <img src="images/Frame (3).png" alt="Icon 4">
+        </button>
+        <button class="btn btn-accent">Sign In</button>
+      </div>
+    </nav>
+    
+    <!-- 1st Banner -->
+    <div class="mx-4 sm:mx-8 md:mx-20 my-8  rounded-lg">
+        <div class="relative bg-[url('/images/bgbanner.png')] bg-cover bg-center h-screen bg-black rounded-3xl">
+            <!-- -------------------------------------------------- -->
+            <div class="flex flex-col lg:flex-row justify-center items-center space-y-4 lg:space-y-0 lg:space-x-4 p-4 border border-white min-h-screen">
+                <div class="lg:ml-10 p-4 rounded-lg shadow-lg border border-blue-200 text-center lg:text-left">
+                    <p class="text-4xl sm:text-6xl md:text-8xl text-white font-bold">Welcome to the <span class="text-indigo-700">ReTro</span> Forum</p>
+                    <p class="text-lg sm:text-xl md:text-2xl text-white p-2 sm:p-4 md:p-6 opacity-70">Share your favorite opinion and win a forum coffee mug!</p>
+                    <!-- ----------------------------------------------- -->
+                    <div class="max-w-md mx-auto p-6 bg-white rounded-xl shadow-lg">
+                      <div class="flex items-center border border-gray-300 rounded-md">
+                          <input id="get-value" type="text" class="w-full p-2 focus:outline-none rounded-l-md" placeholder="Enter text here">
+                          <button onclick="handleSubmit()" class="px-4 py-2 bg-blue-500 text-white rounded-r-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                              Submit
+                          </button>
+                      </div>
+                  </div>
+                    <!-- ----------------------------------------------- -->
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center lg:text-left">
+                    <!-- -------------------------------------------- -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center sm:justify-between space-y-4 sm:space-y-0 sm:space-x-16 mx-4">
+                        <p class="text-xl font-semibold">Members</p>
+                        <p class="text-xl font-semibold">01</p>
+                    </div>
+                    <!-- -------------------------------------------- -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center sm:justify-between space-y-4 sm:space-y-0 sm:space-x-16 mx-4">
+                        <p class="text-xl font-semibold">Forum</p>
+                        <p class="text-xl font-semibold">05</p>
+                    </div>
+                    <!-- -------------------------------------------- -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center sm:justify-between space-y-4 sm:space-y-0 sm:space-x-16 mx-4">
+                        <p class="text-xl font-semibold">Topics</p>
+                        <p class="text-xl font-semibold">01</p>
+                    </div>
+                    <!-- -------------------------------------------- -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center sm:justify-between space-y-4 sm:space-y-0 sm:space-x-16 mx-4">
+                        <p class="text-xl font-semibold">Replies</p>
+                        <p class="text-xl font-semibold">01</p>
+                    </div>
+                    <!-- -------------------------------------------- -->
+                </div>
+                <!-- -------------------------------------------------- -->
+            </div>
+        </div>
+    </div>
+
+      <!--2nd banner -->
+      <div class="flex justify-center items-center p-4 sm:p-9">
+        <div class="max-w-lg w-full">
+          <p class="text-center text-4xl sm:text-5xl text-black font-bold mb-6 sm:mb-9">Let’s Discuss</p>
+          <p class="text-center text-base sm:text-lg md:text-xl font-medium opacity-70 leading-relaxed">
+            Yes, you can run unit tests and view the results directly within the app.<br> 
+            The integrated testing features allow for a streamlined experience.
+          </p>
+        </div>
+      </div>
+      
+      
+      
+
+        <!-- 3rd banner -->
+         <div class="flex justify-evenly items-start">
+          <div id="post-container" class="flex flex-col min-h-screen space-y-7  ">
+            <!-- card desing(1) -->
+
+          
+          </div>
+
+          <!-- display clicked iteams -->
+          <div id="clicked-item" class="bg-[#12132D0D] space-y-3 p-6 border rounded-xl">
+              <div class="flex justify-between items-center space-x-10">
+                <p>Title</p>
+                <p>Mark as read  </p>
+              </div>
+                <!-- heading and watch -->
+               
+           </div>
+
+         </div>
+
+         <!-- 4th Banner -->
+         <div class="mx-4 sm:mx-8 md:mx-20 my-8 rounded-lg">
+          <div class="bg-[url('/images/bgbanner.png')] bg-cover bg-center h-auto sm:h-screen bg-black rounded-3xl">
+            <!-- main functionality -->
+            <div class="flex flex-col-reverse lg:flex-row items-center justify-center min-h-screen p-6 sm:p-10 lg:p-20">
+              <div class="space-y-6 text-center lg:text-left lg:mr-10">
+                <p class="text-white text-4xl sm:text-6xl lg:text-8xl font-bold">Join Our Forum</p>
+                <p class="text-white text-base sm:text-lg lg:text-xl font-semibold">
+                  Share your favorite opinion and win a WP forum coffee mug!<br/>
+                  Yes, you can run unit tests and view the results directly within the app.
+                </p>
+                <div class="flex justify-center lg:justify-start">
+                  <button class="bg-purple-400 p-3 sm:p-5 px-20 sm:px-36 rounded-3xl text-lg sm:text-xl font-semibold">Register Now</button>
+                </div>
+              </div>
+              <div class="w-full max-w-xs sm:max-w-md lg:max-w-lg mb-10 lg:mb-0">
+                <img src="images/joinforum.png" alt="Join Forum" class="w-full h-auto">
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <p class="mt-6 text-3xl sm:text-6xl lg:text-8xl text-center pb-5 font-bold">Latest Posts</p>
+        <p class="text-base sm:text-lg lg:text-xl text-center font-semibold opacity-60">
+          Yes, you can run unit tests and view the results directly within the app.<br/>
+          The integrated testing features allow for a streamlined experience.
+        </p>
+        
+
+          <!-- 5th Banner -->
+          <div id="latest-post" class="flex  justify-center sm:justify-around m-4 sm:m-8 lg:m-20 space-x-4 sm:space-y-0">
+           
+          </div>
+          
+</body>
+
+<script src="app.js"></script>
+
+</html>
